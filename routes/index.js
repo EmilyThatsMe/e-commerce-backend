@@ -1,10 +1,16 @@
+// Dependencies
+// ==================================================
 const router = require('express').Router();
 const apiRoutes = require('./api');
 
+// Router.use
+// ===================================================
 router.use('/api', apiRoutes);
 
 router.use((req, res) => {
   res.send("<h1>Wrong Route!</h1>")
 });
 
+// Exports
+// ===================================================
 module.exports = router;
