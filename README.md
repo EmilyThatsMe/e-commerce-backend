@@ -23,7 +23,7 @@ This application creates and stores backend data for an ecommerce business. It i
  This was created to be used as backend for an ecommerce business. The business can use this data to let customers search for products by category and tag word. 
 
   ## Video
- You can view the video tutorial here: chrome-extension://mmeijimgabbpbgpdklnllpncmdofkcpn/app.html#/files/facf5627-0a6a-4fbf-y25c-b412b947d742
+ You can view the video tutorial here: https://watch.screencastify.com/v/h49kh38fpAs0X6vnHT3c
 
   ## Contributors
   Emily Thon
