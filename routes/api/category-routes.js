@@ -1,7 +1,7 @@
 // dependencies
 // ===========================================================
 const router = require('express').Router();
-const { Category } = require('../../models');
+const { Category, Product } = require('../../models');
 
 // Routes
 // ===========================================================
@@ -10,8 +10,12 @@ const { Category } = require('../../models');
 router.get('/', (req, res) => {
   // find all categories
   // be sure to include its associated Products
-  Category.findAll()
-  .then(dbCategoryData => res.json(dbCategoryData))
+  Category.findAll({
+    include: {
+      model: Product,
+      attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
+    }
+  })
   // if error then throw 500 error 
   .catch(err => {
       console.log(err);
@@ -24,9 +28,13 @@ router.get('/:id', (req, res) => {
   // be sure to include its associated Products
   Category.findOne({
     where: {
-        id: req.params.id
+      id: req.params.id
+    },
+    include: {
+      model: Product,
+      attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
     }
-})
+  })
 .then(dbCategoryData => {
     if (!dbCategoryData) {
         res.status(404).json({ message: 'No category found with this id' });

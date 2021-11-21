@@ -8,10 +8,8 @@ const sequelize = require('../config/connection.js');
 // ========================================================
 class Category extends Model {}
 
-// define table columns
 Category.init(
   {
-    // define columns
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -28,9 +26,10 @@ Category.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'category'
+    modelName: 'category',
   }
 );
+
 
 // exports
 // ==========================================================
