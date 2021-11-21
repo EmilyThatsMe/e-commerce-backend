@@ -9,7 +9,7 @@ This application creates and stores backend data for an ecommerce business. It i
   ## Table of Contents
   * [Installation](#Installation)
   * [Usage](#Usage)
-  * [Video](#Images)
+  * [Video](#video)
   * [Contributors](#Contributors)
   * [Test](#Test)
   * [License](#License)
